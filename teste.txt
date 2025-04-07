@@ -1,0 +1,2 @@
+Esse é um teste de escrita em arquivo.
+Essa é a segunda linha do arquivo.

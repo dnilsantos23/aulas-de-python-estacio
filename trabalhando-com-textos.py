@@ -17,3 +17,6 @@ hoje = datetime.now()
 data_formatada = hoje.strftime('Data: %d/%m/%y') 
 print(hoje)
 print(data_formatada)
+data_formatada_fstring = f'Data:{hoje: %d/%m/%y}'
+print(data_formatada_fstring)
+bonus_vendas = 50
