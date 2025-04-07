@@ -10,7 +10,10 @@ def listar_arquivos(diretorio):
 
     return arquivos_encontrados # Retorna a lista de arquivos encontrados
 
+
 arquivoTexto = open('praticando-em-python.txt', 'w+') # Abre o arquivo 'arquivos.txt' para escrita
-arquivoTexto.write('Arquivos encontrados:\n') # Escreve o cabeçalho no arquivo
+arquivoTexto.write('Arquivos encontrados novo:\n') # Escreve o cabeçalho no arquivo
 arquivoTexto.seek(0) # Move o cursor para o início do arquivo
-print(arquivoTexto.read()) # Lê o conteúdo do arquivo e imprime na tela
+arquivoTexto.write(str(listar_arquivos('C:/PYTHON-PROJECTS'))) # Escreve os arquivos encontrados no arquivo de texto
+print(arquivoTexto.readlines()) # Lê o conteúdo do arquivo e imprime na tela
+arquivoTexto.close() # Fecha o arquivo

@@ -1,3 +1,6 @@
 arquivoTeste = open('teste.txt', 'w')
-arquivoTeste.write('Teste de escrita em arquivo texto\n')
-open('teste.txt', 'a').write('Teste de escrita em arquivo texto\n')
+arquivoTeste.write('Esse é um teste de escrita em arquivo.\n')
+arquivoTeste.write('Essa é a segunda linha do arquivo.\n')
+with open('teste.txt', 'r') as arquivoTeste:
+    conteudo = arquivoTeste.read()
+    print(conteudo)
