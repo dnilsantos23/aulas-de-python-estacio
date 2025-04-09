@@ -19,4 +19,11 @@ print(hoje)
 print(data_formatada)
 data_formatada_fstring = f'Data:{hoje: %d/%m/%y}'
 print(data_formatada_fstring)
-bonus_vendas = 50
+vendas = input('Digite a quantidade vendida: ')
+if int(vendas) > 500:
+     resultado = f'Você ganhou um bônus de 50 reais, então você receberá {int(vendas) + 50} '
+     print(resultado)
+else:
+    resultado = vendas
+    print('Infelizmente você não receberá o bônus, pois você vendeu abaixo de 500 reais!')
+
