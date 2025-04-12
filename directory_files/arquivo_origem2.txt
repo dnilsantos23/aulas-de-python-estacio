@@ -1,0 +1,2 @@
+Arquivo origem 2
+Conteúdo para transcrever para o outro arquivo destino2
