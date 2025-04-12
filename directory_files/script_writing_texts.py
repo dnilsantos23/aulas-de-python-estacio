@@ -26,15 +26,10 @@ def tranfer_texts(arquivo_origem, arquivo_destino):
         return
 
 def main():
-    directory_files = "directory_files"
+    directory_files = "C:\PYTHON-PROJECTS\Estacio\directory_files"
     arquivo_origem = os.path.join(directory_files, 'arquivo_origem1.txt')
     arquivo_destino = os.path.join(directory_files, 'arquivo_destino.txt')
     tranfer_texts(arquivo_origem, arquivo_destino)  
-    os.listdir(directory_files) # Verifica se o diretório existe
-    if os.path.exists(directory_files):
-        print(f'Diretório {directory_files} existe.')
-    else:
-        print(f'Diretório {directory_files} não existe.')  
 
 if __name__ == "__main__":
     main()
