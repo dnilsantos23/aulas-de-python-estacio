@@ -26,7 +26,7 @@ def tranfer_texts(arquivo_origem, arquivo_destino):
         return
 
 def main():
-    directory_files = "C:\PYTHON-PROJECTS\Estacio\directory_files"
+    directory_files = "dir1"
     arquivo_origem = os.path.join(directory_files, 'arquivo_origem1.txt')
     arquivo_destino = os.path.join(directory_files, 'arquivo_destino.txt')
     tranfer_texts(arquivo_origem, arquivo_destino)  
