@@ -29,7 +29,8 @@ def main():
     directory_files = "dir1"
     arquivo_origem = os.path.join(directory_files, 'arquivo_origem1.txt')
     arquivo_destino = os.path.join(directory_files, 'arquivo_destino.txt')
-    tranfer_texts(arquivo_origem, arquivo_destino)  
+    tranfer_texts(arquivo_origem, arquivo_destino) 
+
 
 if __name__ == "__main__":
     main()
