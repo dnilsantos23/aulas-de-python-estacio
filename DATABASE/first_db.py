@@ -40,8 +40,23 @@ try:
             PRIMARY KEY (placa),
             FOREIGN KEY(proprietario) REFERENCES Pessoa(cpf),
             FOREIGN KEY(marca) REFERENCES Marca(id));'''
-    comando = ''' ALTER TABLE Veiculo ADD motor REAL;'''
-   
+    
+    #ADICIONANDO DADOS A TABELA VEICULO
+    comando = ''' ALTER TABLE Veiculo ADD motor REAL; '''
+    
+    comando = ''' DROP TABLE IF EXISTS Veiculo;'''
+    
+    comando = '''CREATE TABLE Veiculo (
+                    placa CHARACTER(7) NOT NULL,
+                    ano INTEGER NOT NULL,
+                    cor TEXT NOT NULL,
+                    motor REAL NOT NULL,
+                    proprietario INTEGER NOT NULL,
+                    marca INTEGER NOT NULL,
+                    PRIMARY KEY (placa),
+                    FOREIGN KEY(proprietario) REFERENCES Pessoa(cpf),
+                    FOREIGN KEY(marca) REFERENCES Marca(id));'''
+    
     # Efetivação do comando
     cursor.execute(comando)
     conexao.commit()
