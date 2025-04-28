@@ -19,10 +19,29 @@ try:
     cursor.execute(comando)
 
     # Inserção de dados na tabela
-    comando = '''INSERT INTO Pessoa (cpf, nome, nascimento, oculos) VALUES
+    '''
+    comando = INSERT INTO Pessoa (cpf, nome, nascimento, oculos) VALUES
                 (12345678900, 'João', '1990-01-01', 1),
                 (98765432100, 'Maria', '1985-05-15', 0),
-                (45678912300, 'José', '1992-10-20', 1);'''
+                (45678912300, 'José', '1992-10-20', 1);
+    '''
+    comando = '''CREATE TABLE Marca (
+                    id INTEGER NOT NULL,
+                    nome TEXT NOT NULL,
+                    sigla CHARACTER(2) NOT NULL,
+                    PRIMARY KEY (id));'''
+
+    comando = ''' CREATE TABLE Veiculo (
+            placa CHARACTER(7) NOT NULL,
+            ano INTEGER NOT NULL,
+            cor TEXT NOT NULL,
+            proprietario INTEGER NOT NULL,
+            marca INTEGER NOT NULL,
+            PRIMARY KEY (placa),
+            FOREIGN KEY(proprietario) REFERENCES Pessoa(cpf),
+            FOREIGN KEY(marca) REFERENCES Marca(id));'''
+    comando = ''' ALTER TABLE Veiculo ADD motor REAL;'''
+   
     # Efetivação do comando
     cursor.execute(comando)
     conexao.commit()
